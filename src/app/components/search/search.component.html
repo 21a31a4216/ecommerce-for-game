@@ -1,0 +1,8 @@
+<!-- search.component.html -->
+<div class="search-container">
+  <input [(ngModel)]="searchTerm" 
+         placeholder="Search games..." 
+         (keyup.enter)="onSearch()">
+  <button (click)="onSearch()">Search</button>
+  <button *ngIf="searchTerm" (click)="clearSearch()">Clear</button>
+</div>
